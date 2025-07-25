@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:prueba_ecommerce_app/data/category_repository.dart';
-import 'package:prueba_ecommerce_app/data/product_repository.dart';
+import 'package:prueba_ecommerce_app/data/repositories/category_repository.dart';
+import 'package:prueba_ecommerce_app/data/repositories/product_repository.dart';
 import 'package:prueba_ecommerce_app/presentation/providers/category_provider.dart';
 import 'package:prueba_ecommerce_app/presentation/providers/product_provider.dart';
 import 'routes/app_router.dart';
