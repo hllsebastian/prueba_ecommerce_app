@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:prueba_ecommerce_app/data/category_repository.dart';
+import 'package:prueba_ecommerce_app/data/repositories/category_repository.dart';
 
 class CategoryProvider with ChangeNotifier {
   final CategoryRepository repository;

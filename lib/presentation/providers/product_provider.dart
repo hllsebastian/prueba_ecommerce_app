@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:prueba_ecommerce_app/data/product_repository.dart';
+import 'package:prueba_ecommerce_app/data/repositories/product_repository.dart';
 import 'package:prueba_ecommerce_app/domain/models/product_model.dart';
 
 class ProductProvider with ChangeNotifier {
