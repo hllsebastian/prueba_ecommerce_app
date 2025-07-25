@@ -1,16 +1,35 @@
-# prueba_ecommerce_app
+# 🛒 Flutter Ecommerce Demo App
 
-A new Flutter project.
+Este proyecto es una aplicación de ecommerce desarrollada con **Flutter**, enfocada en demostrar buenas prácticas de desarrollo, gestión de estado con `Provider`, navegación con `GoRouter`, y consumo de una API pública de productos.
 
-## Getting Started
+## 📱 Características principales
 
-This project is a starting point for a Flutter application.
+- Pantalla principal con listado de categorías.
+- Navegación por productos filtrados por categoría.
+- Carrito de compras con modo normal o exprés (según la hora).
+- Pantalla de detalle de producto.
+- Gestión global del estado del carrito.
+- Arquitectura limpia y modular.
+- Diseño responsive y optimizado para móviles.
 
-A few resources to get you started if this is your first Flutter project:
+## 🚀 Tecnologías usadas
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Flutter**
+- **Provider** - Gestión de estado
+- **GoRouter** - Navegación
+- **Dio / http** - Llamadas a la API
+- **API pública** - [Fake Store API](https://fakestoreapi.com/)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🧱 Estructura del proyecto
+
+```bash
+lib/
+├── data/             # Endpoints, servicios y modelos de datos
+├── domain/           # Reglas de negocio y modelos
+├── presentation/     # Widgets y pantallas
+│   ├── home/
+│   ├── products/
+│   ├── cart/
+├── provider/         # Providers globales
+├── routes/           # Configuración de rutas con GoRouter
+└── main.dart
