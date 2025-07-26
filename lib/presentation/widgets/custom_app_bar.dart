@@ -28,10 +28,15 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     icon: const Icon(Icons.arrow_back, color: Colors.black87),
                     onPressed: () => Navigator.of(context).pop(),
                   ),
-                if (!canPop) const SizedBox(width: 0),
                 const Expanded(child: _SearchProductContent()),
                 const SizedBox(width: 12),
-                const CartIconWithBadge(),
+                if (canPop) const CartIconWithBadge(),
+                if (!canPop)
+                  const Icon(
+                    Icons.person_2_outlined,
+                    size: 30,
+                    color: Colors.black87,
+                  ),
               ],
             ),
           ),
@@ -101,50 +106,6 @@ class _SearchProductContent extends StatelessWidget {
               style: TextStyle(color: Colors.black87),
             ),
           ),
-        ],
-      ),
-    );
-  }
-}
-
-class _SearchProduct extends StatelessWidget {
-  const _SearchProduct();
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
-      child: Row(
-        children: [
-          Expanded(
-            child: Container(
-              height: 40,
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: const Row(
-                children: [
-                  Icon(Icons.search, color: Colors.black87),
-                  SizedBox(width: 8),
-                  Expanded(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: 'Busca en tu app',
-                        hintStyle: TextStyle(color: Colors.black87),
-                        border: InputBorder.none,
-                        isDense: true,
-                      ),
-                      style: TextStyle(color: Colors.black87),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          const SizedBox(width: 12),
-          const Icon(Icons.person_2_outlined, size: 32, color: Colors.black87),
         ],
       ),
     );

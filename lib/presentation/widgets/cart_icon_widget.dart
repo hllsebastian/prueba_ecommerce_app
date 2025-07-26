@@ -14,13 +14,16 @@ class CartIconWithBadge extends StatelessWidget {
       alignment: Alignment.topRight,
       children: [
         IconButton(
-          icon: const Icon(Icons.shopping_cart, color: Colors.black87),
+          icon: const Icon(
+            Icons.shopping_cart_outlined,
+            size: 30,
+            color: Colors.black87,
+          ),
           onPressed: () => context.push('/cart'),
         ),
         if (totalItems > 0)
           Positioned(
-            right: 6,
-            top: 6,
+            right: 5,
             child: Container(
               padding: const EdgeInsets.all(4),
               decoration: const BoxDecoration(
