@@ -6,5 +6,6 @@ class Endpoints {
   static String productsByCategory(String category) =>
       '$base/products/category/$category';
 
+  // TODO: enable this endpoint when product details are needed
   // static String productById(int id) => '$base/products/$id';
 }
