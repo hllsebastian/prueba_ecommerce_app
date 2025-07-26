@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:prueba_ecommerce_app/domain/models/product_model.dart';
 import 'package:prueba_ecommerce_app/presentation/providers/cart_provider.dart';
+import 'package:prueba_ecommerce_app/presentation/widgets/buy_widget/product_action_widget.dart';
 
 class ProductGrid extends StatelessWidget {
   final List<Product> products;
@@ -68,29 +69,7 @@ class ProductCard extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
           ),
           const SizedBox(height: 8),
-          quantity == 0
-              ? ElevatedButton(
-                  onPressed: () => cart.addProduct(product),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    minimumSize: const Size(80, 32),
-                  ),
-                  child: const Text('Agregar'),
-                )
-              : Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    IconButton(
-                      icon: const Icon(Icons.remove_circle_outline),
-                      onPressed: () => cart.removeProduct(product),
-                    ),
-                    Text(quantity.toString()),
-                    IconButton(
-                      icon: const Icon(Icons.add_circle_outline),
-                      onPressed: () => cart.addProduct(product),
-                    ),
-                  ],
-                ),
+          ProductActionWidget(product: product),
         ],
       ),
     );
