@@ -24,21 +24,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
     Future.microtask(() {
       context.read<ProductProvider>().loadProductsByCategory(widget.category);
     });
-    // fetchProductsByCategory(widget.category);
   }
-
-  // Future<void> fetchProductsByCategory(String category) async {
-  //   final response = await http.get(
-  //     Uri.parse('https://fakestoreapi.com/products/category/$category'),
-  //   );
-  //   if (response.statusCode == 200) {
-  //     final data = json.decode(response.body) as List;
-  //     setState(() {
-  //       products = data.map((json) => Product.fromJson(json)).toList();
-  //       loading = false;
-  //     });
-  //   }
-  // }
 
   String capitalizeWords(String input) {
     return input
@@ -56,7 +42,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
 
     return Scaffold(
       appBar: CustomAppBar(categoryTitle: widget.category),
-      body: loading
+      body: provider.loading
           ? const Center(child: CircularProgressIndicator())
           : Column(
               children: [
