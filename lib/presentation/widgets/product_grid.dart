@@ -54,11 +54,13 @@ class ProductCard extends StatelessWidget {
               onPressed: () => cart.addProduct(product),
             ),
           ),
-          Image.network(
-            product.image,
-            width: 110,
-            height: 110,
-            fit: BoxFit.contain,
+          Flexible(
+            child: Image.network(
+              product.image,
+              width: 110,
+              height: 110,
+              fit: BoxFit.contain,
+            ),
           ),
           const SizedBox(height: 10),
           Text(
