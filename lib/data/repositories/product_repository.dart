@@ -5,6 +5,9 @@ import 'package:prueba_ecommerce_app/data/api/endpoints.dart';
 import 'package:prueba_ecommerce_app/domain/models/product_model.dart';
 
 class ProductRepository {
+  http.Client client;
+  ProductRepository({http.Client? client}) : client = client ?? http.Client();
+
   Future<List<Product>> fetchByCategory(String category) async {
     final url = Endpoints.productsByCategory(category);
     AppLogger.info("Fetching products from API: $url");
