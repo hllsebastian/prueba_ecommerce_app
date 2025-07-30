@@ -17,7 +17,7 @@ Este proyecto es una aplicación de ecommerce desarrollada con **Flutter**, enfo
 - **Flutter**
 - **Provider** - Gestión de estado
 - **GoRouter** - Navegación
-- **Dio / http** - Llamadas a la API
+- **http** - Llamadas a la API
 - **API pública** - [Fake Store API](https://fakestoreapi.com/)
 
 ## 🧱 Estructura del proyecto
@@ -26,10 +26,9 @@ Este proyecto es una aplicación de ecommerce desarrollada con **Flutter**, enfo
 lib/
 ├── data/             # Endpoints, servicios y modelos de datos
 ├── domain/           # Reglas de negocio y modelos
-├── presentation/     # Widgets y pantallas
-│   ├── home/
-│   ├── products/
-│   ├── cart/
-├── provider/         # Providers globales
+├── presentation/     # Providers, Widgets y pantallas
+│   ├── providers/  
+│   ├── screens/
+│   ├── widgets/
 ├── routes/           # Configuración de rutas con GoRouter
 └── main.dart
